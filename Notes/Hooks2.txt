@@ -1,0 +1,22 @@
+1) cosnt [count, setCount] = useState(0)
+count inital value set 0 and second index is function
+ to update the count value and store it 
+
+
+ 2) useEffect - 
+ syx - useEffect(function(){
+
+    
+ },[])
+
+-useEffect runs on every render
+-useEffect(() => {
+  //Runs on every render
+});
+-useEffect(() => {
+  //Runs only on the first render
+}, []);
+-useEffect(() => {
+  //Runs on the first render
+  //And any time any dependency value changes
+}, [prop, state]);
