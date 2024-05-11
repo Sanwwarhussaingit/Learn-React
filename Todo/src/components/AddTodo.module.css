@@ -1,0 +1,26 @@
+.addTodoInput{
+    width: 40vw;
+    height: 35px;
+    margin: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
+    overflow: hidden;
+    border: 1px solid rgb(73, 71, 71);
+
+}
+.addTodoInput:hover{
+    border-color: rgb(27, 116, 148);
+}
+
+.addTodoButton{
+    
+    border-radius: 10px;
+    height: 40px;
+    margin: 5px;
+    width: 5rem;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: cornflowerblue;
+}

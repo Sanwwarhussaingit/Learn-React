@@ -1,0 +1,28 @@
+.Item{
+    display: flex;
+}
+.Item button{
+    margin: 10px;
+    height: 35px;
+    border-radius: 10%;
+    font-size: 30px;
+}
+.Item li{
+
+    display: flex;
+    
+    align-items: center;
+    margin: 10px;
+    /* background-color: ; */
+    width: 40vw;
+    height: 35px;
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 800;
+    border: 1.3px solid rgb(83, 84, 85);
+    border-radius: 10px;
+    padding-left:15px;
+    padding: 5px;
+    overflow: hidden;
+
+}
