@@ -6,9 +6,9 @@ function App() {
   return (
     <>
       <UserContextProvider>
-      <h1>HI sanwwar</h1>
-      <Login />
-      <Profile />
+        <h1>HI sanwwar</h1>
+        <Login />
+        <Profile />
       </UserContextProvider>
     </>
   );
