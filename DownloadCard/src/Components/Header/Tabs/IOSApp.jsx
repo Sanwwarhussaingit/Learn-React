@@ -9,7 +9,7 @@ const IOSApp = () => {
       <p className="text-lg text-gray-600 mb-12">
         Get our amazing app from the App Store.
       </p>
-      <div className="bg-white shadow-lg rounded-lg p-8 flex items-center justify-center">
+      <div className="bg-gradient-to-r from-gray-100 to-gray-400 shadow-lg rounded-lg p-8 flex items-center justify-center">
         <img src={ImgAppstore} alt="App Store" className="w-40" />
         <div className="ml-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">EDUWARE</h2>

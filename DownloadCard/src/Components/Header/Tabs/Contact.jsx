@@ -3,7 +3,7 @@ const Contact = () => {
     <div className="flex flex-col items-center justify-center min-h-screen  bg-gradient-to-r from-gray-400 to-gray-100">
       <h1 className="text-4xl font-bold text-gray-800 mb-8">Contact Us</h1>
 
-      <div className="bg-white shadow-lg rounded-lg p-8 max-w-2xl w-9/12">
+      <div className="bg-gradient-to-r from-gray-100 to-gray-400 shadow-lg rounded-lg p-8 max-w-2xl w-9/12">
         <form>
           <div className="mb-4">
             <label
@@ -26,10 +26,12 @@ const Contact = () => {
             >
               Contact number
             </label>
+
             <input
-              min={10}
-              max={10}
-              type="number"
+              type="tel"
+              maxLength="10"
+              required
+              pattern="[0-9]{10}"
               id="number"
               name="number"
               className="border border-gray-300 rounded-md p-2 w-full"
@@ -71,7 +73,6 @@ const Contact = () => {
           </button>
         </form>
       </div>
-      
     </div>
   );
 };
