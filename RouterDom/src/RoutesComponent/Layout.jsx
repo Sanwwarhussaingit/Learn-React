@@ -7,6 +7,7 @@ const Layout = () => {
       <>
       <Header/>
       <Outlet/> 
+      <div>Lorem ipssse nostrum quas tempora.</div>
       </>
     
   );
