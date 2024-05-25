@@ -1,15 +1,37 @@
 import Container from "./components/Container";
 import AddTodo from "./components/AddTodo";
 import TodoItem from "./components/TodoItem";
-import { useState } from "react";
+z// import { useState } from "react";
 import { TodoItemContext } from "./store/TodoItemContext";
+import { useReducer } from "react";
 
+const todoItemReducer = (currentItem,action) => 
+{
+
+  if(action.type === "NEW_ITEM")
+  {
+    const newTodoItem = [...currentItem,{name: action.payload.todoItem}]
+
+  }
+  else if(action.type === "DELETE_ITEM"){}
+  return [];
+};
 function App() {
-  const [item, setItem] = useState([]);
+  // const [item, setItem] = useState([]);
+  //reducer
+  const [item, dispatch] = useReducer(todoItemReducer, []);
 
-  const addNewItem = (todoItem) => {
-    setItem([...item, todoItem]);
+  //add new item
+  const addNewItem = (itemName) => {
+    const newItemAction = {
+      type: "NEW_ITEM",
+      payload: {
+        itemName
+      },
+    };
+    dispatch(newItemAction);
   };
+
   const deleteItem = (itemName) => {
     console.log(itemName);
     const newItems = item.filter((itm) => itm !== itemName);

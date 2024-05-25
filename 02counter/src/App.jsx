@@ -1,28 +1,29 @@
-import { useState, useEffect, useRef } from "react";
+import {useReducer } from "react";
 import "./App.css";
 
-function App() {
-  let [counter, setCounter] = useState(1);
-  // let counter =10;
+const initialstate = 0;
+const method = (state,action)=>{    
 
-  function addValue() {
-    setCounter(counter + 1);
-    // console.log(counter)
-  }
-  const btnRef = useRef();
+      switch(action){
+        case "Increment":
+          return state+1;
+        case "Decrement":
+          return state-1;
+        default:
+          return state;
+      }
+}
 
-  useEffect(function () {
-    btnRef.current.style.color = "cyan";
-    btnRef.current.style.backgroundColor = "red";
-  });
+
+
+export default function App() {
+
+  const [count,dispatch]= useReducer(method,initialstate);
 
   return (
     <>
-      <button ref={btnRef} onClick={addValue}>
-        click me {counter}
-      </button>
-      <button ref={btnRef}>Delete btn</button>
+      <h1>{count}</h1>
+      <button onClick={()=>dispatch("Increment")}>Click+1</button>
     </>
   );
 }
-export default App;
